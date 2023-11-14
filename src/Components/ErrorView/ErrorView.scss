@@ -1,0 +1,30 @@
+.error-view{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  svg{
+    width: 300px;
+    height: 300px;
+    color: aliceblue;
+  }
+
+  .error-view-text{
+    color: white;
+    width: 500px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 50px;
+  }
+}
+
+
+.error-view-text{
+  color: black;
+  width: 230px;
+  text-align: center;
+  font-size: 30px;
+}

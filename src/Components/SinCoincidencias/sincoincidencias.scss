@@ -1,0 +1,19 @@
+.contenido{
+  width: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  svg{
+    color: aliceblue;
+    width: 200px;
+    height: 200px;
+  }
+
+  h1{
+    font-weight: 500;
+    color: aliceblue;
+  }
+}

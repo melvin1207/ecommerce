@@ -1,0 +1,9 @@
+html {
+  height: -webkit-fill-available;
+}
+
+body {
+  margin: 0 auto;
+  height: -webkit-fill-available;
+  height: 100vh;
+}
