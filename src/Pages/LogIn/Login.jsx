@@ -1,7 +1,9 @@
-import { Link, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { useForm } from '../../hooks/useForm'
 import UseLogin from '../../Services/UseLogin'
+import { Link, useNavigate } from "react-router-dom"
+import './login.scss'
+
 function Login() {
   const [postData, setPostData] = useState(null)
   const navigate = useNavigate();
@@ -48,17 +50,19 @@ const handleOnChange = (e) => {
     ...previousValue,
     [e.target.name]: e.target.value,
   }))
+}
 
   return (
-    <div className="w-full h-screen flex flex-col justify-center items-center">
-      <div className="log-in">
-        <h2>Login to your account</h2>
+    <div className="container m-5 p-4 d-flex flex-column">
+      <legend>Login to your account</legend>
+      <div className="log-in d-flex flex-column">
         <form 
-          className="custom-form flex flex-col items-center" 
+          className="d-flex flex-column align-items-center container-sm" 
           autoComplete="off"
           onSubmit={handleSubmit}
         >
           <input 
+            className="form-control m-3"
             type="email" 
             name="email" 
             id="email" 
@@ -67,6 +71,7 @@ const handleOnChange = (e) => {
             onChange={handleOnChange}
           />
           <input
+            className="form-control m-2"
             type="password"
             name="password"
             id="password"
@@ -75,13 +80,13 @@ const handleOnChange = (e) => {
             onChange={handleOnChange}
           />
           {requestResult && <p className="required-message">{requestResult}</p>}
-          <p className="create-account-message">¿New user? <Link className='underline font-light' to={'/sign-up'}>Create your account</Link></p>
-          <button type="submit">LOGIN</button>
+          <h5 className="m-2">Eres Nuevo? <Link className='underline' to={'/sign-up'}>Crea tu cuenta</Link></h5>
+          <button type="submit" className="btn btn-primary m-2">LOGIN</button>
         </form>
       </div>
       </div>
   );
 }
-}
+
 
 export default Login

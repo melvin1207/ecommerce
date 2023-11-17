@@ -58,7 +58,7 @@ const App = () => {
   <BrowserRouter>
     <ContextAuthProvider>
       <ContextAppProvider>
-        <NavBar/>
+        <NavBar classname="navbar"/>
         <AppRoutes/>
         <SideMenu/>
       </ContextAppProvider>

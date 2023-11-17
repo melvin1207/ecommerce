@@ -60,11 +60,11 @@ const SignUp = () => {
   const { input, setInput, handleSubmit, requestResult, setRequestResult} = useForm(data, dataRequired, apiPostForm);
 
   return (
-<div className="container-sm m-5 p-5 d-flex justify-content-center">
+<div className="container m-5 p-5 d-flex justify-content-center">
       <div className="sign-up">
       <legend>Sign Up</legend>
         <form
-          className="custom-form d-flex flex-column items-center"
+          className="custom-form d-flex flex-column"
           autoComplete="off"
           onSubmit={handleSubmit}
         >
